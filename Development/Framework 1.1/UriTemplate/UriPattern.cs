@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Specialized;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace UriTemplate
