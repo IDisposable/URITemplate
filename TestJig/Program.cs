@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.Collections.Specialized;
 
 using UriTemplate;
 
@@ -11,12 +11,12 @@ namespace TestJig
         static void Main(string[] args)
         {
             UriPattern p = UriPattern.Create("/{user}/{year}/{month}");
-            IDictionary<string, string> values = p.Parse("/marc/2007/06?no#touch");
-            foreach (KeyValuePair<string, string> item in values)
+            NameValueCollection matches = p.Parse("/marc/2007/06?no#touch");
+            foreach (string key in matches)
             {
-                System.Console.WriteLine(item.Key.ToString() + " = " + item.Value.ToString());
+                System.Console.WriteLine(key.ToString() + " = " + matches.Get(key).ToString());
             }
-            IResolver resolver = new DictionaryResolver(values);
+            IResolver resolver = new DictionaryResolver(matches);
             string url =  UriTemplate.UriTemplate.Expand("http://localhost/paystub/{year}/{month}/{user}", resolver);
             System.Console.WriteLine(url);
         }
