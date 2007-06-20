@@ -41,9 +41,6 @@ namespace UriTemplate
             try
             {
                 Uri uri = new Uri(result);
-
-                if (!uri.IsWellFormedOriginalString())
-                    throw new TemplateException("Invalid expansion", new ArgumentException("malformed Uri", "result"));
             }
             catch (UriFormatException e)
             {
