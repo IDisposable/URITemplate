@@ -1,5 +1,6 @@
 using System;
-using System.Collections.Generic;
+using System.Collections;
+using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 
 namespace UriTemplate
@@ -21,9 +22,9 @@ namespace UriTemplate
             p = new Regex(finalPattern); // not compiled by default...
         }
 
-        public IDictionary<string, string> Parse(string instance)
+        public NameValueCollection Parse(string instance)
         {
-            IDictionary<string, string> dict = new Dictionary<string, string>();
+            NameValueCollection dict = new NameValueCollection();
 
             foreach (Match match in p.Matches(instance))
             {
@@ -50,7 +51,7 @@ namespace UriTemplate
 
         private string[] GetTokens(string template)
         {
-            List<string> tokens = new List<string>();
+            ArrayList tokens = new ArrayList();
 
             foreach (Match match in pattern.Matches(template))
             {
@@ -61,7 +62,7 @@ namespace UriTemplate
                     tokens.Add(token);
             }
 
-            return tokens.ToArray();
+            return (string[])tokens.ToArray(typeof(string));
         }
 
         public static UriPattern Create(string template)

@@ -1,19 +1,19 @@
-using System.Collections.Generic;
+using System.Collections.Specialized;
 
 namespace UriTemplate
 {
-    public class DictionaryResolver : Dictionary<string, string>, IResolver
+    public class DictionaryResolver : NameValueCollection, IResolver
     {
         public DictionaryResolver()
         {
         }
 
-        public DictionaryResolver(IDictionary<string, string> variables)
+        public DictionaryResolver(NameValueCollection variables)
             : base(variables)
         {
         }
 
-        public string Get(string key)
+        public new string Get(string key)
         {
             return base[key];
         }
