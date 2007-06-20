@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UriTemplate", "UriTemplate\UriTemplate.csproj", "{473F9AED-0061-422A-8A3C-606B6B50A94F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestJig", "TestJig\TestJig.csproj", "{B2128648-AE2C-49E1-8E52-25957FF61AED}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs03.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = UriTemplate\\UriTemplate.csproj
+		SccProjectName1 = UriTemplate
+		SccLocalPath1 = UriTemplate
+		SccProjectUniqueName2 = TestJig\\TestJig.csproj
+		SccProjectName2 = TestJig
+		SccLocalPath2 = TestJig
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{473F9AED-0061-422A-8A3C-606B6B50A94F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{473F9AED-0061-422A-8A3C-606B6B50A94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{473F9AED-0061-422A-8A3C-606B6B50A94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{473F9AED-0061-422A-8A3C-606B6B50A94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2128648-AE2C-49E1-8E52-25957FF61AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2128648-AE2C-49E1-8E52-25957FF61AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2128648-AE2C-49E1-8E52-25957FF61AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2128648-AE2C-49E1-8E52-25957FF61AED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
