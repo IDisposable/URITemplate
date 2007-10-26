@@ -15,10 +15,20 @@ namespace UriTemplate
         private string[] tokens;
 
         protected UriPattern(string template)
+            : this(template, RegexOptions.None)
+        {
+        }
+
+        protected UriPattern(string template, bool compiled)
+            : this(template, compiled ? RegexOptions.Compiled : RegexOptions.None)
+        {
+        }
+
+        protected UriPattern(string template, RegexOptions options)
         {
             tokens = GetTokens(template);
             string finalPattern = BuildRegex(template);
-            p = new Regex(finalPattern); // not compiled by default...
+            p = new Regex(finalPattern, options);
         }
 
         public IDictionary<string, string> Parse(string instance)
@@ -67,6 +77,16 @@ namespace UriTemplate
         public static UriPattern Create(string template)
         {
             return new UriPattern(template);
+        }
+        
+        public static UriPattern Create(string template, bool compiled)
+        {
+            return new UriPattern(template, compiled);
+        }
+
+        public static UriPattern Create(string template, RegexOptions options)
+        {
+            return new UriPattern(template, options);
         }
     }
 }
