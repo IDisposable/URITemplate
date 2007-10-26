@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -49,7 +49,7 @@ namespace UriTemplate
 
         protected string[] GetTokens(string template)
         {
-            List<string> tokens = new List<string>();
+            ArrayList tokens = new ArrayList();
             foreach (Match match in pattern.Matches(template))
             {
                 string token = match.Value;
@@ -60,7 +60,7 @@ namespace UriTemplate
                     tokens.Add(token);
             }
 
-            return tokens.ToArray();
+            return (string[])tokens.ToArray(typeof(string));
         }
 
         protected abstract void VerifyToken(string token);
