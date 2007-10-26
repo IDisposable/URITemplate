@@ -1,0 +1,31 @@
+﻿Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UriTemplate", "UriTemplate\UriTemplate.csproj", "{2BDD5423-591F-470B-B45A-F65F33A62A86}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestJig", "TestJig\TestJig.csproj", "{7F01B2D2-B5EA-4DC5-A30B-9144FC7144BE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{2BDD5423-591F-470B-B45A-F65F33A62A86}.Debug.ActiveCfg = Debug|.NET
+		{2BDD5423-591F-470B-B45A-F65F33A62A86}.Debug.Build.0 = Debug|.NET
+		{2BDD5423-591F-470B-B45A-F65F33A62A86}.Release.ActiveCfg = Release|.NET
+		{2BDD5423-591F-470B-B45A-F65F33A62A86}.Release.Build.0 = Release|.NET
+		{7F01B2D2-B5EA-4DC5-A30B-9144FC7144BE}.Debug.ActiveCfg = Debug|.NET
+		{7F01B2D2-B5EA-4DC5-A30B-9144FC7144BE}.Debug.Build.0 = Debug|.NET
+		{7F01B2D2-B5EA-4DC5-A30B-9144FC7144BE}.Release.ActiveCfg = Release|.NET
+		{7F01B2D2-B5EA-4DC5-A30B-9144FC7144BE}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
