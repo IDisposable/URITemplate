@@ -19,6 +19,11 @@ namespace TestJig
             IResolver resolver = new DictionaryResolver(values);
             string url =  UriTemplate.UriTemplate.Expand("http://localhost/paystub/{year}/{month}/{user}", resolver);
             System.Console.WriteLine(url);
+
+            // test case from Darrel Miller (work item 7938)
+            p = UriPattern.Create("/LiveContacts/Contacts/Contact({ContactId})");
+            values = p.Parse("/LiveContacts/Contacts/Contact(1001)");
+            System.Console.WriteLine("expect 1001: " + (values["ContactId"] ?? ""));
         }
     }
 }

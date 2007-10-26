@@ -7,8 +7,8 @@ namespace UriTemplate
     public class UriPattern
     {
         private static Regex pattern = new Regex(@"\{[^{}]+\}", RegexOptions.Compiled);
-        private static string regexMetaCharacters = @"[\\\[\]\(\)\&\^\$\?\#\+\*\|\>\<]";
-        private static string regexMetaCharactersReplacements = @"\\$0";
+        private static Regex regexMetaPattern = new Regex(@"[\\\[\]\(\)\&\^\$\?\#\+\*\|\>\<]", RegexOptions.Compiled);
+        private static string regexMetaCharactersReplacements = @"\$0";
         private static string tokenReplacement = "([^/?#]*)?";
 
         private Regex p;
@@ -44,7 +44,7 @@ namespace UriTemplate
 
         private string BuildRegex(string template)
         {
-            template = template.Replace(regexMetaCharacters, regexMetaCharactersReplacements) + ".*";
+            template = regexMetaPattern.Replace(template, regexMetaCharactersReplacements) + ".*";
             return pattern.Replace(template, tokenReplacement);
         }
 
