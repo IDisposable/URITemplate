@@ -2,7 +2,7 @@
 The UriTemplate library is a simple set of code to encapsulate the building and parsing of URIs from replacement tokens. Using this couple of classes will make it easy to build RESTful URIs.
 
 ## News
-[Release 1.0](https://github.com/IDisposable/URITemplate/tree/Releases/v1.1/Framework_2.0)  on 10/26/2007 to include a fix patterns with Regex meta-characters and ability to build compiled UriPatterns.
+[Release 1.1](https://github.com/IDisposable/URITemplate/tree/Releases/v1.1/Framework_2.0)  on 10/26/2007 to include a fix patterns with Regex meta-characters and ability to build compiled UriPatterns.
 
 ## What the heck is this all about?
 UriTemplates are a simple way to codify the build of URI strings that follow web-optimization and RESTful principles. In short, you want URIs that are "hackable" and well formed. UriTemplates allow regular constructing and parsing through named **tokens** that specify where logical substitutions should be performed.
